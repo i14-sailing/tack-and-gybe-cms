@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_submissions",
+  "info": {
+    "name": "Video Submission",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "boatsName": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "youtubeVideoId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "startTime": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0
+    },
+    "endTime": {
+      "type": "decimal",
+      "min": 0
+    }
+  }
+}

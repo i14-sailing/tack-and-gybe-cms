@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_submissions",
+  "info": {
+    "name": "Team Submission",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "AUS",
+        "AUT",
+        "CAN",
+        "DEN",
+        "GBR",
+        "GER",
+        "IRL",
+        "ITA",
+        "JPN",
+        "POL",
+        "SUI",
+        "SWE",
+        "USA"
+      ],
+      "required": true,
+      "default": "GER"
+    },
+    "sailNumber": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 10000
+    },
+    "tackSubmission": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "gybeSubmission": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "tackYoutubeVideoId": {
+      "type": "string"
+    },
+    "gybeYoutubeVideoId": {
+      "type": "string"
+    },
+    "tackStartTime": {
+      "type": "float",
+      "min": 0
+    },
+    "tackEndTime": {
+      "type": "float",
+      "min": 0
+    },
+    "gybeStartTime": {
+      "type": "float",
+      "min": 0
+    },
+    "gybeEndTime": {
+      "type": "float",
+      "min": 0
+    },
+    "contactEmail": {
+      "type": "email",
+      "required": true,
+      "private": true
+    },
+    "boatsName": {
+      "type": "string"
+    }
+  }
+}
